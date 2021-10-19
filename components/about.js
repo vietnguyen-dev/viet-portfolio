@@ -8,7 +8,6 @@ const ImageDiv = styled.div`
    justify-content: center;
    margin: 15%;
    overflow: hidden;
-   border-radius: 100%;
 `
 
 export default function About() {

@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import styled from 'styled-components'
-import Logo from './logo'
 
 const NavItems = styled.ul`
   list-style-type: none;
@@ -39,8 +38,14 @@ const ToggleOff = styled.button`
   background-color: #04212d;
   color: white;
   border: none;
-  font-size: 3.5vh;
+  font-size: 3vh;
 `;
+
+const Logo = styled.h4`
+  font-size: 3.5vh;
+  filter: drop-shadow(3px 3px 0px #f27127);
+`;
+
 
 export default function Nav() {
     const [nav, setNav] = useState(false)
@@ -49,12 +54,13 @@ export default function Nav() {
 
     return (
       <NavBar>
-        <Logo />
-        {nav ? (
+        <Logo>V</Logo>
+        {nav ? 
+        <>
           <NavItems>
             <ToggleOff onClick={settingNav}>X</ToggleOff>
             <NavItem>
-              <a href="#skills"onClick={settingNav}s>
+              <a href="#skills"onClick={settingNav}>
                 SKILLS
               </a>
             </NavItem>
@@ -62,9 +68,10 @@ export default function Nav() {
             <NavItem>CONTACT</NavItem>
             <NavItem>ABOUT</NavItem>
           </NavItems>
-        ) : (
+        </>
+         : 
           <ToggleOn onClick={settingNav}>...</ToggleOn>
-        )}
+        }
       </NavBar>
     );
 }

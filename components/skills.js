@@ -5,7 +5,7 @@ const SkillList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15%;
-    padding: 5% 0% 5% 5%;
+    padding: 5% 1% 5% 5%;
 `
 
 const SkillMarker = styled.li`

@@ -9,8 +9,8 @@ let projects = [
     img: `/images/rick-morty.png`,
     height: 540,
     width: 970,
-    github: `https://github.com/vietnguyen-dev/rick-and-morty-api`,
-    live: `https://upbeat-hawking-1cb3cf.netlify.app/`,
+    github: 'https://github.com/vietnguyen-dev/rick-and-morty-api',
+    live: 'https://upbeat-hawking-1cb3cf.netlify.app/',
     page: '/rick-morty'
   },
 ];
@@ -27,6 +27,9 @@ export default function Projects() {
                     img={project.img}
                     height={project.height}
                     width={project.width}
+                    github={project.github}
+                    live={project.live}
+                    page={project.page}
                 />
             )}
         </div>

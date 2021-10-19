@@ -9,18 +9,17 @@ const IconDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5% 6%;
+  margin: 5% 5%;
 `;
 
 const IconWrapper = styled.div`
     margin: 5%;
-    background-color: white;
 `;
 
 const ModelDiv = styled.div`
-  margin-top: 10%;
+  margin-top: 11%;
   height: 60vh;
-  width: 35vh;
+  width: 80vw;
   background-color: grey;
 `;
 
