@@ -17,10 +17,10 @@ const Icons = styled.div`
 
 export default function Footer() {
     return (
-      <footer>
+      <footer className='main'>
       <Logo>V </Logo>
       <Icons>
-        <IconWrapper>
+        <IconWrapper className='icon center'>
           <Image 
             src='/images/linkedin.png'
             width={32}
@@ -28,7 +28,7 @@ export default function Footer() {
             alt='link to viet nguyen linkedinx'
           />
         </IconWrapper>
-        <IconWrapper>
+        <IconWrapper className='icon center'>
           <Image 
             src='/images/github.png'
             width={32}
@@ -36,7 +36,7 @@ export default function Footer() {
             alt='link to viet nguyen github'
           />
         </IconWrapper>
-        <IconWrapper>
+        <IconWrapper className='icon center'>
           <Image 
             src='/images/resume.png'
             width={32}

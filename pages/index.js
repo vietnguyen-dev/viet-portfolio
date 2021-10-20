@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Layout, { siteTitle } from "../components/layout";
 import Nav from "../components/nav";
 import Landing from "../components/landing";
@@ -6,36 +7,31 @@ import Projects from "../components/projects";
 import Contact from "../components/contact";
 import About from "../components/about";
 import Footer from "../components/footer";
-import styled from "styled-components";
-
-const MainPart = styled.section`
-  margin: 10% 10% 15% 10%;
-`
 
 
 export default function Home() {
+  useEffect(() =>{
+    console.log("Slow Down there buddy 🕵️")
+  }, [])
+
   return (
     <>
       <Nav />
       <Layout>
-        <MainPart>
+       
           <Landing />
-        </MainPart>
-        <MainPart>
+       
+      
           <Skills />
-        </MainPart>
-        <MainPart>
+        
           <Projects />
-        </MainPart>
-        <MainPart>
+       
           <Contact />
-        </MainPart>
-        <MainPart>
+      
           <About />
-        </MainPart>
-        <MainPart>
+        
           <Footer />
-        </MainPart>
+        
       </Layout>
     </>
   );

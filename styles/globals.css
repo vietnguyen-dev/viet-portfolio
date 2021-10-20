@@ -43,6 +43,31 @@ h4{
   margin-top: 3%;
 }
 
+.image{
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+.image:hover{
+  animation: complete180 2s ease;
+}
+
+@keyframes complete180 {
+  from {
+    -webkit-transform:  rotateY(0deg);
+		-moz-transform:  rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+		-moz-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
 p{
   margin-top: 3%;
   font-size: 1.75vh;
@@ -57,9 +82,27 @@ li{
 a{
   color: white;
   text-decoration: none;
-  padding-bottom: 3%;
+  padding: 3%;
   margin: 5%;
+}
+
+.external{
   border-bottom: 1px solid #f27127;
+  background-size: 100% 200%;
+  background-image: linear-gradient(#012E40 50%, #f27127 50%);
+  -webkit-transition: .2s;
+    -moz-transition:  .2s linear;
+    transition: .2s linear;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover{
+  background-position: 0% 100%;
 }
 
 td{
@@ -76,4 +119,29 @@ footer{
 
 footer div{
  margin-bottom: 5%;
+}
+
+.main{
+  margin: 10% 10% 15% 10%;
+}
+
+.icon{
+  height: 32px;
+  width: 32px;
+  border-radius: 15%;
+  padding: 2%;
+  border: 1px solid #f27127;
+  background-size: 100% 200%;
+  background-image: linear-gradient(#012E40 50%, #f27127 50%);
+  -webkit-transition: .2s;
+    -moz-transition:  .2s linear;
+    transition: .2s linear;
+  -webkit-transition: .2s ease-in-out;
+    -moz-transition:  .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.icon:hover{
+  transform: scale(1.4);
+  background-position: 0% 100%;
 }

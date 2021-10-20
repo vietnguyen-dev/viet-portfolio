@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import ContactInfo from '../components/contact'
+import Project from '../components/project'
 import Footer from '../components/footer';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -21,7 +22,7 @@ const NewNav = styled.div`
     margin: 7%;
 `
 
-const Logo = styled.h4`
+const Logo = styled.h5`
   font-size: 3.5vh;
   filter: drop-shadow(3px 3px 0px #f27127);
 `;
@@ -41,9 +42,11 @@ const SkillMarker = styled.li`
 
 const IconWrapper = styled.div`
     margin: 5%;
+    padding: 2%;
     border-radius: 15%;
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #f27127;
 `;
 
 const Icons = styled.div`
@@ -59,6 +62,7 @@ export default function Rickmorty() {
         <>
         <NewNav>
             <Logo>V</Logo>
+            <IconWrapper className='icon center'>
             <Link href='/'>
                 <a>
                     <Image 
@@ -69,6 +73,7 @@ export default function Rickmorty() {
                     />
                 </a>
             </Link>
+            </IconWrapper>
         </NewNav>
         <Layout>
             <MainPart>
@@ -91,7 +96,7 @@ export default function Rickmorty() {
                     </div>
                 </SkillList>
                 <Icons>
-                    <IconWrapper>
+                    <IconWrapper className='icon'>
                         <a href='https://github.com/vietnguyen-dev/rick-and-morty-api'>
                             <Image 
                                 src='/images/github.png'
@@ -101,7 +106,7 @@ export default function Rickmorty() {
                             />
                         </a>
                     </IconWrapper>
-                    <IconWrapper>
+                    <IconWrapper className='icon'>
                         <a href='https://upbeat-hawking-1cb3cf.netlify.app/'>
                             <Image 
                                 src='/images/link.png'
@@ -137,12 +142,8 @@ export default function Rickmorty() {
                 <p>As this is my first Mid-sized React Project, I learned a lot about how a component tree should be structured / how to make components reusable.
                 Originally my grid of items only worked with Characters data. I spent a whole day refactoring everything so that it works with all data types.</p>
             </MainPart>
-            <MainPart>
-                <ContactInfo />
-            </MainPart>
-            <MainPart>
-                <Footer />
-            </MainPart>
+            <ContactInfo />
+            <Footer />
         </Layout>
         </>
     )

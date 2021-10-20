@@ -16,7 +16,7 @@ const SkillMarker = styled.li`
 
 export default function Skills() {
     return (
-      <div id='skills'>
+      <div id='skills' className='main'>
         <h3>SKILLS</h3>
         <SkillList>
           <div>

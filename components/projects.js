@@ -13,11 +13,22 @@ let projects = [
     live: 'https://upbeat-hawking-1cb3cf.netlify.app/',
     page: '/rick-morty'
   },
+  {
+    id: 1,
+    title: `Pho Gia (Milwaukie)`,
+    description: `Pho Gia had no online prescene. I was tasked with creating one for them`,
+    img: `/images/pho-gia.png`,
+    height: 540,
+    width: 970,
+    github: 'https://github.com/vietnguyen-dev/pho-gia2',
+    live: 'https://phogiamilwaukie.com',
+    page: '/pho-gia'
+  },
 ];
 
 export default function Projects() {
     return (
-        <div id='projects'>
+        <div id='projects' className='main'>
             <h3>PROJECTS</h3>
             {projects.map(project =>
                 <Project 

@@ -9,7 +9,7 @@ const ContactInfo = styled.table`
 
 export default function Contact() {
     return (
-      <div id="contact">
+      <div id="contact" className='main'>
         <h3>CONTACT</h3>
         <p>Let's work together! </p>
         <ContactInfo>
@@ -24,12 +24,9 @@ export default function Contact() {
                 />
               </td>
               <td>
-                <p>
-                  {" "}
-                  <a href="mailto:vietnguyent22@gmail.com">
+                  <a href="mailto:vietnguyent22@gmail.com" className='external' target="_blank">
                     vietnguyent22@gmail.com
                   </a>
-                </p>
               </td>
             </tr>
             <tr>
@@ -42,7 +39,7 @@ export default function Contact() {
                 />
               </td>
               <td>
-                <a href="https://www.linkedin.com/in/viet-nguyen-b877931b5/">
+                <a href="https://www.linkedin.com/in/viet-nguyen-b877931b5/" className='external' target="_blank">
                   {" "}
                   Viet Nguyen{" "}
                 </a>
@@ -58,7 +55,7 @@ export default function Contact() {
                 />
               </td>
               <td>
-                <a href="https://github.com/vietnguyen-dev"> vietnguyen-dev </a>
+                <a href="https://github.com/vietnguyen-dev" className='external' target="_blank"> vietnguyen-dev </a>
               </td>
             </tr>
             <tr>
@@ -71,7 +68,7 @@ export default function Contact() {
                 />
               </td>
               <td>
-                <a href="https://www.linkedin.com/in/viet-nguyen-b877931b5/">
+                <a href="https://www.linkedin.com/in/viet-nguyen-b877931b5/" className='external'>
                   Download Resume
                 </a>
               </td>

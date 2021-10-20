@@ -19,18 +19,20 @@ const Icons = styled.div`
 
 const IconWrapper = styled.div`
     margin: 5%;
-    border-radius: 15%;
-    height: 32px;
-    width: 32px;
+    padding: 1%;
 `;
 
 const MainImgWrapper = styled.div`
-    margin-top: 3%;
+    margin-top: 2vh;
+`
+
+const ProjectWrapper = styled.div`
+    margin-bottom: 7vh;
 `
 
 export default function Project(props) {
     return (
-        <>
+        <ProjectWrapper>
             <MainImgWrapper>
                 <Image 
                     src={props.img}
@@ -43,8 +45,8 @@ export default function Project(props) {
             <p>{props.description}</p>
             <LinksDiv>
                 <Icons>
-                    <IconWrapper>
-                        <a href={props.github}>
+                    <IconWrapper className='icon center'>
+                        <a href={props.github} target="_blank">
                             <Image 
                                 src='/images/github.png'
                                 width={32}
@@ -53,8 +55,8 @@ export default function Project(props) {
                             />
                         </a>
                     </IconWrapper>
-                    <IconWrapper>
-                        <a href={props.live}>
+                    <IconWrapper className='icon center'>
+                        <a href={props.live} target="_blank">
                             <Image 
                                 src='/images/link.png'
                                 width={34}
@@ -65,9 +67,9 @@ export default function Project(props) {
                     </IconWrapper>
                 </Icons>
                 <PageLink>
-                    <Link href={props.page}><a>LEARN MORE</a></Link>
+                    <Link href={props.page}><a className='external'>LEARN MORE</a></Link>
                 </PageLink>
             </LinksDiv>
-        </>
+        </ProjectWrapper>
     )
 }

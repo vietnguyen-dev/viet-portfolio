@@ -41,7 +41,7 @@ const ToggleOff = styled.button`
   font-size: 3vh;
 `;
 
-const Logo = styled.h4`
+const Logo = styled.h5`
   font-size: 3.5vh;
   filter: drop-shadow(3px 3px 0px #f27127);
 `;
@@ -70,7 +70,7 @@ export default function Nav() {
           </NavItems>
         </>
          : 
-          <ToggleOn onClick={settingNav}>...</ToggleOn>
+          <ToggleOn className='icon' onClick={settingNav}>...</ToggleOn>
         }
       </NavBar>
     );

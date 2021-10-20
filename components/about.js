@@ -12,7 +12,7 @@ const ImageDiv = styled.div`
 
 export default function About() {
     return (
-      <div id="about">
+      <div id="about" className='main'>
         <h3>ABOUT </h3>
         <p>
           I am a recent graduate the CMDC Program at WSUV. I primarily am a
@@ -21,7 +21,7 @@ export default function About() {
           and AR/VR development.
         </p>
         <ImageDiv>
-            <Image src='/images/nguyen_profile.png' width={100} height={100} alt='what I look like' />
+            <Image className='image' src='/images/nguyen_profile.png' width={100} height={100} alt='what I look like' />
         </ImageDiv>
       </div>
     );
