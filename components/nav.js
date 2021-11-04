@@ -7,7 +7,7 @@ const NavItems = styled.ul`
   right: 0;
   background-color: #04212d;
   height: 100vh;
-  width: 50vw;
+  width: 40vw;
   padding: 8%;
   z-index: 100;
   text-align: right;

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styled from "styled-components";
+import ModelContainer from "./model";
 
 const LandingDiv = styled.div`
   display: grid;
@@ -15,14 +16,6 @@ const IconDiv = styled.div`
 const IconWrapper = styled.div`
     margin: 5%;
 `;
-
-const ModelDiv = styled.div`
-  margin-top: 11%;
-  height: 60vh;
-  width: 80vw;
-  background-color: grey;
-`;
-
 
 export default function Landing() {
     return (
@@ -63,7 +56,7 @@ export default function Landing() {
             </IconWrapper>
           </IconDiv>
         </div>
-        <ModelDiv>3D Model hEre</ModelDiv>
+       <ModelContainer />
       </LandingDiv>
     );
 };

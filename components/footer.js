@@ -8,11 +8,12 @@ const Logo = styled.h4`
 `;
 
 const IconWrapper = styled.div`
-    margin: 5%;
+    margin: 3%;
 `;
 
 const Icons = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 `
 
 export default function Footer() {
