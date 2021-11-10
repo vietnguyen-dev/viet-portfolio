@@ -18,20 +18,11 @@ export default function Home() {
     <>
       <Nav />
       <Layout>
-       
-          <Landing />
-       
-      
-          <Skills />
-        
-          <Projects />
-       
-          <Contact />
-      
-          <About />
-        
-          <Footer />
-        
+        <Landing />
+        <Skills />
+        <Projects />
+        <Contact />
+        <About />
       </Layout>
     </>
   );

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./footer";
 import styled from "styled-components";
 
 const Mainsection = styled.main`
@@ -9,7 +10,7 @@ const Mainsection = styled.main`
 const name = 'Viet Nguyen';
 export const siteTitle = "Viet Nguyen | Front End Developer";
 
-export default function Layout({ children}) {
+export default function Layout({children}) {
   return (
     <>
       <Head>
@@ -29,6 +30,7 @@ export default function Layout({ children}) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Mainsection>{children}</Mainsection>
+      <Footer />
     </>
   );
 }

@@ -4,10 +4,12 @@ import styled from 'styled-components'
 const NavItems = styled.ul`
   list-style-type: none;
   position: absolute;
+  top: 0;
   right: 0;
   background-color: #04212d;
   height: 100vh;
   width: 40vw;
+  margin: 0;
   padding: 8%;
   z-index: 100;
   text-align: right;
@@ -16,13 +18,17 @@ const NavItems = styled.ul`
 const NavItem = styled.li`
     margin-top: 15%;
     font-size: 3vh;
+    letter-spacing: 3px;
 `
 
 const NavBar = styled.div`
-    display: grid;
-    grid-template-columns: 90% 10%;
-    margin: 7%;
-`
+  display: grid;
+  grid-template-columns: 90% 10%;
+  margin: 7%;
+  padding: 3%;
+ 
+  background-color: #012e40;
+`;
 
 const ToggleOn = styled.button`
     background-color: #012E40;

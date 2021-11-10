@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import ContactInfo from '../components/contact'
 import Project from '../components/project'
-import Footer from '../components/footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from "styled-components";
@@ -143,7 +142,6 @@ export default function Rickmorty() {
                 Originally my grid of items only worked with Characters data. I spent a whole day refactoring everything so that it works with all data types.</p>
             </MainPart>
             <ContactInfo />
-            <Footer />
         </Layout>
         </>
     )
