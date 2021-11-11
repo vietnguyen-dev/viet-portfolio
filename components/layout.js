@@ -14,7 +14,7 @@ export default function Layout({children}) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/idea-16.ico" />
         <meta
           name="description"
           content="Viet Nguyen | Front End Developer Portfolio | Next.js React Redux"

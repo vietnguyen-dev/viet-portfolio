@@ -2,10 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SkillList = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 15%;
     padding: 5% 1% 5% 5%;
+`
+
+const SkillsContainer = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15%;
 `
 
 const SkillMarker = styled.li`
@@ -16,26 +19,20 @@ const SkillMarker = styled.li`
 
 export default function Skills() {
     return (
-      <div id='skills' className='main'>
+      <div id="skills" className="main">
         <h3>SKILLS</h3>
         <SkillList>
-          <div>
-            <ul>
-              <SkillMarker>JavaScript ES6</SkillMarker>
-              <SkillMarker>React</SkillMarker>
-              <SkillMarker>Redux</SkillMarker>
-              <SkillMarker>Next.js</SkillMarker>
-              <SkillMarker>Three.js</SkillMarker>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <SkillMarker>Jest</SkillMarker>
-              <SkillMarker>SASS</SkillMarker>
-              <SkillMarker>NPM</SkillMarker>
-              <SkillMarker>Firebase</SkillMarker>
-            </ul>
-          </div>
+          <SkillsContainer>
+            <SkillMarker>JavaScript</SkillMarker>
+            <SkillMarker>React</SkillMarker>
+            <SkillMarker>Redux</SkillMarker>
+            <SkillMarker>Three.js</SkillMarker>
+            <SkillMarker>Next.js</SkillMarker>
+            <SkillMarker>Jest</SkillMarker>
+            <SkillMarker>SASS</SkillMarker>
+            <SkillMarker>NPM</SkillMarker>
+            <SkillMarker>Firebase</SkillMarker>
+          </SkillsContainer>
         </SkillList>
       </div>
     );
