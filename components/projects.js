@@ -30,6 +30,7 @@ export default function Projects() {
     return (
         <div id='projects' className='main'>
             <h3>PROJECTS</h3>
+            <div className="project-container">
             {projects.map(project =>
                 <Project 
                     key ={project.id}
@@ -43,6 +44,7 @@ export default function Projects() {
                     page={project.page}
                 />
             )}
+            </div>
         </div>
     )
 }

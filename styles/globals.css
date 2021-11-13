@@ -145,3 +145,35 @@ footer div{
   transform: scale(1.4);
   background-position: 0% 100%;
 }
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+@media only screen and (min-width: 600px){
+  .hide{
+    display: block;
+  }
+
+  .project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+  }
+
+  .show{
+    display: none;
+  }
+
+  
+}
+
+@media only screen and (min-width: 800px){
+  h1, h2{
+    text-align: left;
+  }
+}

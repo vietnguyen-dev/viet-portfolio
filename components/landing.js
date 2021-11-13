@@ -4,6 +4,10 @@ import ModelContainer from "./model";
 
 const LandingDiv = styled.div`
   display: grid;
+
+  @media only screen and (min-width: 800px){
+    grid-template-columns: 50% 50%;
+  }
 `;
 
 const IconDiv = styled.div`
@@ -11,10 +15,20 @@ const IconDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin: 5% 5%;
+
+  @media only screen and (min-width: 800px){
+     justify-content: left;
+      align-items: left;
+      margin-left: 0;
+  }
 `;
 
 const IconWrapper = styled.div`
     margin: 5%;
+
+    @media only screen and (min-width: 800px){
+      margin-left: 0;
+   }
 `;
 
 export default function Landing() {

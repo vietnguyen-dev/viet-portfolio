@@ -7,6 +7,10 @@ const ModelDiv = styled.div`
   margin-top: 5%;
   height: 35vh;
   width: 80vw;
+
+  @media only screen and (min-width: 800px){
+     width: 40vw;
+  }
 `;
 
 const ModelContainer = () => {

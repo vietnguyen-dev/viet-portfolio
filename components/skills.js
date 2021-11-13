@@ -9,9 +9,16 @@ const SkillsContainer = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 15%;
+
+  @media only screen and (min-width: 800px){
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5%;
+  
+  }
 `
 
 const SkillMarker = styled.li`
+  font-size: 2.5vh;
   ::marker {
     color: #f27127;
   }

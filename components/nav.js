@@ -11,23 +11,69 @@ const NavItems = styled.ul`
   width: 40vw;
   margin: 0;
   padding: 8%;
-  z-index: 100;
+  z-index: 50;
   text-align: right;
+
+  @media only screen and (min-width: 600px){
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+    position: static;
+    height: 3vh;
+    width: 80vw;
+    padding: 2% 1%;
+    background-color: #012E40;
+  }
+  
+  @media only screen and (min-width: 800px){
+    
+  }
 `;
 
 const NavItem = styled.li`
     margin-top: 15%;
     font-size: 3vh;
     letter-spacing: 3px;
+
+    :after{
+      display: block;
+      content: '';
+      border-bottom: 2px solid #f27127;
+      transform: scaleX(0);  
+      transition: transform 250ms ease-in-out;
+    }
+
+    :hover:after{
+      transform: scaleX(1);
+    }
+
+    @media only screen and (min-width: 600px){
+      margin: 2% 3%;
+      font-size: 2vh;
+      text-align: center;
+    }
+
+
 `
 
 const NavBar = styled.div`
   display: grid;
   grid-template-columns: 90% 10%;
-  margin: 7%;
-  padding: 3%;
- 
+  position: sticky;
+  top: 0%;
+  
+  padding: 8%;
+  z-index: 100;
   background-color: #012e40;
+
+  @media only screen and (min-width: 600px){
+    grid-template-columns: 10% 90%;
+    padding: 4% 10%;
+    opacity: .9;
+  }
+  
+  @media only screen and (min-width: 800px){
+    
+  }
 `;
 
 const ToggleOn = styled.button`
@@ -61,10 +107,9 @@ export default function Nav() {
     return (
       <NavBar>
         <Logo>V</Logo>
-        {nav ? 
-        <>
-          <NavItems>
-            <ToggleOff onClick={settingNav}>X</ToggleOff>
+        <ToggleOn className='icon show' onClick={settingNav}>...</ToggleOn>
+          <NavItems className={nav ? 'show' : 'hide'}>
+            <ToggleOff onClick={settingNav} className={'show'}>X</ToggleOff>
             <NavItem>
               <a href="#skills"onClick={settingNav}>
                 SKILLS
@@ -74,10 +119,6 @@ export default function Nav() {
             <NavItem>CONTACT</NavItem>
             <NavItem>ABOUT</NavItem>
           </NavItems>
-        </>
-         : 
-          <ToggleOn className='icon' onClick={settingNav}>...</ToggleOn>
-        }
       </NavBar>
     );
 }
