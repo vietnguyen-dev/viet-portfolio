@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const NavItems = styled.ul`
@@ -12,7 +13,6 @@ const NavItems = styled.ul`
   margin: 0;
   padding: 8%;
   z-index: 50;
-  text-align: right;
 
   @media only screen and (min-width: 600px){
     display: grid;
@@ -25,35 +25,37 @@ const NavItems = styled.ul`
   }
   
   @media only screen and (min-width: 800px){
-    margin-left: 20%;
-    width: 60vw;
+    margin-left: 22vw;
+    width: 40vw;
   }
 `;
 
 const NavItem = styled.li`
-    margin-top: 15%;
-    font-size: 3vh;
-    letter-spacing: 3px;
+  margin-top: 15%;
+  font-size: 3vh;
+  letter-spacing: 3px;
+  font-weight: bold;
 
-    :after{
-      display: block;
-      content: '';
-      border-bottom: 2px solid #f27127;
-      transform: scaleX(0);  
-      transition: transform 250ms ease-in-out;
-    }
+  :after {
+    display: block;
+    content: "";
+    padding-bottom: 3%;
+    border-bottom: 3px solid #f27127;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
 
-    :hover:after{
-      transform: scaleX(1);
-    }
+  :hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 
-    @media only screen and (min-width: 600px){
-      margin: 2% 3%;
-      font-size: 2vh;
-      text-align: center;
-    }
-
-`
+  @media only screen and (min-width: 600px) {
+    margin: 2% 3%;
+    font-size: 2vh;
+    letter-spacing: 5px;
+  }
+`;
 
 const NavBar = styled.div`
   display: grid;
@@ -66,13 +68,13 @@ const NavBar = styled.div`
   background-color: #012e40;
 
   @media only screen and (min-width: 600px){
-    grid-template-columns: 10% 90%;
-    padding: 4% 10%;
+    grid-template-columns: 20% 80%;
+    padding: 4% 5%;
     opacity: .9;
   }
   
   @media only screen and (min-width: 1000px){
-    padding: 2% 10%;
+    padding: 0% 10%;
   }
 `;
 
@@ -96,6 +98,11 @@ const ToggleOff = styled.button`
 const Logo = styled.h5`
   font-size: 3.5vh;
   filter: drop-shadow(3px 3px 0px #f27127);
+  margin: 2% 3%;
+
+  @media only screen and (min-width: 1000px) {
+    font-size: 4vh;
+  }
 `;
 
 
@@ -107,18 +114,34 @@ export default function Nav() {
     return (
       <NavBar>
         <Logo>V</Logo>
-        <ToggleOn className='icon show' onClick={settingNav}>...</ToggleOn>
-          <NavItems className={nav ? 'show' : 'hide'}>
-            <ToggleOff onClick={settingNav} className={'show'}>X</ToggleOff>
-            <NavItem>
-              <a href="#skills"onClick={settingNav}>
-                SKILLS
-              </a>
-            </NavItem>
-            <NavItem>PROJECTS</NavItem>
-            <NavItem>CONTACT</NavItem>
-            <NavItem>ABOUT</NavItem>
-          </NavItems>
+        <ToggleOn className="icon show" onClick={settingNav}>
+          ...
+        </ToggleOn>
+        <NavItems className={nav ? "show" : "hide"}>
+          <ToggleOff onClick={settingNav} className={"show"}>
+            X
+          </ToggleOff>
+          <NavItem>
+            <Link href="#skills" onClick={settingNav}>
+              <a>SKILLS</a>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#projects" onClick={settingNav}>
+              <a>PROJECTS</a>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#contact" onClick={settingNav}>
+              <a>CONTACT</a>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#about" onClick={settingNav}>
+              <a>ABOUT</a>
+            </Link>
+          </NavItem>
+        </NavItems>
       </NavBar>
     );
 }

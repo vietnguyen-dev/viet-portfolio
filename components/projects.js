@@ -9,10 +9,11 @@ let projects = [
     img: `/images/rick-morty.png`,
     height: 540,
     width: 970,
-    github: 'https://github.com/vietnguyen-dev/rick-and-morty-api',
-    live: 'https://upbeat-hawking-1cb3cf.netlify.app/',
-    page: '/rick-morty'
+    github: "https://github.com/vietnguyen-dev/rick-and-morty-api",
+    live: "https://upbeat-hawking-1cb3cf.netlify.app/",
+    page: "/rick-morty",
   },
+
   {
     id: 1,
     title: `Pho Gia (Milwaukie)`,
@@ -20,9 +21,20 @@ let projects = [
     img: `/images/pho-gia.png`,
     height: 540,
     width: 970,
-    github: 'https://github.com/vietnguyen-dev/pho-gia2',
-    live: 'https://phogiamilwaukie.com',
-    page: '/pho-gia'
+    github: "https://github.com/vietnguyen-dev/pho-gia2",
+    live: "https://phogiamilwaukie.com",
+    page: "/pho-gia",
+  },
+  {
+    id: 2,
+    title: `Notes`,
+    description: `I use the IOS notes app alot on my apple devices so I decided to create a similar one for my desktop`,
+    img: `/images/notes.png`,
+    height: 540,
+    width: 970,
+    github: "https://github.com/vietnguyen-dev/notes",
+    live: "https://cranky-hypatia-7bab66.netlify.app/",
+    page: "/notes",
   },
 ];
 

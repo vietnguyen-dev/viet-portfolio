@@ -3,13 +3,8 @@ import Footer from "./footer";
 import styled from "styled-components";
 
 const Mainsection = styled.main`
-    margin-top: 15%;
-    margin-bottom: 15%;
-
-    @media only screen and (min-width: 1000px){
-      margin-top: 10%;
-      margin-bottom: 10%;
-    }
+    margin-top: 5%;
+    margin-bottom: 5%;
 `
 
 const name = 'Viet Nguyen';

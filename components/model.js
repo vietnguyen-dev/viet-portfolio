@@ -23,10 +23,6 @@ const ModelDiv = styled.div`
      width: 40vw;
      height: 55vh;
   }
-
-  @media only screen and (min-width: 1000px){
-    transform: translateY(-100px)
-  }
 `;
 
 const ModelContainer = () => {
