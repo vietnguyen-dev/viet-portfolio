@@ -6,7 +6,8 @@ const LandingDiv = styled.div`
   display: grid;
 
   @media only screen and (min-width: 800px){
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 55% 45%;\
+    margin-bottom: 0%;
   }
 `;
 
@@ -17,9 +18,9 @@ const IconDiv = styled.div`
   margin: 5% 5%;
 
   @media only screen and (min-width: 800px){
-     justify-content: left;
-      align-items: left;
-      margin-left: 0;
+     justify-content: right;
+      align-items: right;
+      margin-right: 0;
   }
 `;
 

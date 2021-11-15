@@ -25,7 +25,8 @@ const NavItems = styled.ul`
   }
   
   @media only screen and (min-width: 800px){
-    
+    margin-left: 20%;
+    width: 60vw;
   }
 `;
 
@@ -52,7 +53,6 @@ const NavItem = styled.li`
       text-align: center;
     }
 
-
 `
 
 const NavBar = styled.div`
@@ -71,8 +71,8 @@ const NavBar = styled.div`
     opacity: .9;
   }
   
-  @media only screen and (min-width: 800px){
-    
+  @media only screen and (min-width: 1000px){
+    padding: 2% 10%;
   }
 `;
 
